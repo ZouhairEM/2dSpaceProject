@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<head>
+    <title>Interactive Solar system</title>
+    <link rel="stylesheet" type="text/css" href="css.css">
+    <script src="sound.js"></script>
+    <script src="orbits.js"></script>
+    <script src="background.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script type="text/javascript">
+    </script>
+</head>
+
+<body>
+
+    <div class="menu"> <button type="button" value="disable" disabled="disabled" class="range-class"><input type="range" class="slider" id="range" min="1" max="30"   value="16"/></button>
+        <button type="button" id="disappearbutton" class="disappearbutton" onclick="PlayDisappearSound()">Disappear</button><audio id="blackholesound"> </audio>
+        <button type="button" id="blackholebutton" class="blackholebutton" onclick="PlayBlackHoleSound()">Black hole</button>
+        <audio id="spacesound"> </audio>
+		<button type="button" id="reloadbutton" class="reloadbutton" onclick="load()">Reset</button><audio id="disappearsound"> </audio>
+        <button type="button" id="playbutton" class="playbutton" onclick="playOrPause()">Sound off</button>
+        <a href="../../projects.html"><button type="button" id="portfolio" class="portfoliobutton">Back To Portfolio</button></a>
+    </div>
+	
+    <div class="solarsystem"> <svg viewbox="0 0 1000 600" id="Layer_1" preserveAspectRatio="xMinYMin meet"><g  id="Sun2">
+	
+		<image style="overflow:visible;opacity:0.88;"  width="114" height="113" id="XMLID_20_" xlink:href="data:image/png;base64,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" transform="matrix(1 0 0 1 443.1679 244.1679)">
+	</image>
+	<g id="XMLID_13_">
+		<circle id="Sun" class="st0" cx="500" cy="300.8" r="30"/>
+	</g>
+</g>
+		<circle id="Mercury"  r="5.3"/>
+		<circle id="Venus"  r="7.3"/>
+		<circle id="Earth" class="st3" r="7.5"/>
+		<circle id="Mars"   r="8.2"/>
+		<circle id="Jupiter"  r="19.6"/>
+		<circle id="Saturn"  r="13.5"/>
+		<circle id="Uranus"  r="9"/>
+		<circle id="Neptune" r="7"/>
+		<circle id="Moon" r="2.1"/>
+		<circle id="Ganymede" r="2.3"/>
+		<circle id="Comet" r="2.3"/>
+		<circle id="Comettwo" r="2.3"/>
+		<circle id="Cometthree" r="2.3"/>
+	</svg>
+
+        <script>		
+            //Animation speed, "value" changes on input, 
+            animateInterval = setInterval(animate, 16);
+            $("input").on("input change", function() {
+                var value = $(this).val();
+                clearInterval(animateInterval);
+                animateInterval = setInterval(animate, 31 - value);
+            })
+						
+            //Black hole animation, bends orbit by 0.2 on click
+            var clickCounter = 0;
+            var bendOrbit = 0;
+            $('#blackholebutton').on('click', function() {
+                bendOrbit = 0.2;
+                buttonClick = false;
+            });
+
+            //Disappear animation
+            var clickCounter = 0;
+            var bendOrbit = 0;
+            $('#disappearbutton').on('click', function() {
+                bendOrbit = 0.4;
+                buttonClick = true;
+            });
+			
+            //Replaces Sound On button with Sound Off button
+            $('#playbutton').click(function() {
+                var $this = $(this);
+                if (isPlaying) {
+                    isPlaying = true;
+                    $this.text('Sound off');
+
+                } else {
+                    isPlaying = false;
+                    $this.text('Sound on');
+                }
+
+            });
+			
+            //Removes black hole button
+			var svg = document.getElementById('blackholebutton');
+            var src; // undefined
+			//Text in variables depending click of black hole button
+			var infoBlackhole 	= "Zwarte gat <br><br> Een zwart gat is een gebied waaruit niets, zelfs licht niet, kan ontsnappen, vanwege de extreme vervorming van de ruimtetijd door de zwaartekracht van een zeer compacte enorme massa.";
+			var infoSun			= "De Zon. <br><br> De zon is een middelgrote ster die voornamelijk bestaat uit waterstof en helium. <br> Het is de meest nabije ster. De zon ligt 150 miljoen km van ons vandaan. We zien de zon schijnen zoals het er acht minuten geleden uitzag. ";
+						
+            if (svg) {
+                svg.addEventListener('click', function(event) {
+                    document.getElementById("Sun2").setAttribute("opacity", "0.0");
+                    document.getElementById("Sun").setAttribute("fill-opacity", "0.0");
+                    $("img").css("opacity", "1.0");
+				
+					document.getElementById('infosun').innerHTML = infoBlackhole;
+                    $(disappearbutton).replaceWith(reloadbutton);
+                    $(blackholebutton).replaceWith(reloadbutton);
+                    $(cometsbutton).replaceWith(reloadbutton);
+                    this.parentNode.replaceChild(img, this); //comment this back in if you wanna replace it
+                }, false);
+			}
+
+			//Removes buttons and hide sun
+            var svg = document.getElementById('disappearbutton');
+            var src; // undefined
+            if (svg) {
+                svg.addEventListener('click', function(event) {
+				  $("#Sun2").fadeOut(400, function() {
+					$(this).attr("src", "media/blackhole2.png");
+					$(this).load(function () {
+					  $(this).fadeIn(400);
+					});
+                    });
+				
+                    $("img").css("opacity", "0.0");
+                    $(disappearbutton).replaceWith(reloadbutton);
+                    $(blackholebutton).replaceWith(reloadbutton);
+                    $(cometsbutton).replaceWith(reloadbutton);
+                    this.parentNode.replaceChild(img, this); //comment this back in if you wanna replace it
+                }, false);
+            }			
+	
+	        //Comets animation
+            var bendOrbit = 0;
+            $('#cometsbutton').on('click', function() {
+                bendCometOrbit = 1.0;
+                cometClick = true;
+            });
+			
+						
+			var planetArray = [ 'Sun',    'Mercury',    'Venus',    'Earth',    'Neptune',    'Uranus'];
+			
+var randomNumber = Math.floor(Math.random()*planetArray.length); 
+
+	
+			//COMETS
+            var svg = document.getElementById('cometsbutton');
+            var src; // undefined
+            if (svg) {
+                svg.addEventListener('click', function(event) {
+					planetX = (planetArray[randomNumber]);
+                    var img = document.createElement("img");
+                    $(disappearbutton).replaceWith(reloadbutton);
+                    $(blackholebutton).replaceWith(reloadbutton);
+                    $(cometsbutton).replaceWith(reloadbutton);
+                    this.parentNode.replaceChild(img, this); //comment this back in if you wanna replace it
+                }, false);
+				
+            }
+						
+			//Centers the solar system
+            $("#solarsystem").addClass("centered-content")
+                .wrap("<div class='center-outer-container'></div>")
+                .wrap("<div class='center-inner-container'></div>");
+				
+				
+			function load() {
+                location.reload();
+            }
+			        </script>
+	        <img id="blackhole" src="media/pres4.png" alt="" />
+    </div>
+	
+	<!-- Descriptions of the sun/planets -->
+	
+	<div id="infosun" class="infosun"> </div>
+	<div id="infojupiter" class="infojupiter">Jupiter. <br><br>Jupiter is de grootste (gas)planeet in het zonnestelsel. Er razen stormen over Jupiter die eeuwen kunnen duren. <br>Het heeft tevens ook de grootste maan in het zonnestelsel: Ganymede.</div>
+	<div id="infomercury" class="infomercury">Mercurius. <br><br> Mercurius is de binnenste en kleinste planeet in ons zonnestelsel. De planeet kent enorme temperatuurverschillen. Overdag is het er vreselijk heet, soms wel 450 graden Celcius, en in de nacht daalt de temperatuur tot een ijzige 185 graden onder nul.</div>
+	<div id="infovenus" class="infovenus">Venus. <br><br>Venus is genoemd naar de Godin van de Liefde en schoonheid. Niet echt een toepasselijke naam; de planeet is namelijk omgeven door dikke giftige wolken van zwavelzuur. Deze wolken houden de zonnewarmte vast, dat maakt het de warmste planeet in het zonnestelsel. </div>
+	<div id="infoearth" class="infoearth">De Aarde. <br><br>Onze eigen, blauwe planeet. De enige waargenomen planeet met leven. Hier gebeuren de gekste dingen. </div>
+	<div id="infomars" class="infomars">Mars. <br><br>De Rode Planeet. Vernoemd naar de Romeinse God van de Oorlog. Er zijn plannen voor een bemande vlucht naar Mars. Dit zal ergens tussen 2030 en 2035 plaats moeten vinden. <br>Tip: bekijk 'The Martian'!</div>
+	<div id="infosaturn" class="infosaturn">Saturnus. <br><br>Saturnus is een gasplaneet. Het opvallendse aan Saturnus zijn de mooie ringen. Deze bestaan uit miljoenen ijsbrokken en gesteente. De ringen zijn heel dun in vergelijking tot hun breedte. Ze hebben een doorsnede van wel 275.000 km, maar zijn nog geen kilometer dik.</div>
+	<div id="infouranus" class="infouranus">Uranus. <br><br>Uranus is de eerste planeet ontdekt met de telescoop. Het opmerkelijkste aan Uranus is dat de planeet op zijn kant ligt. De andere planeten staan allemaal min of meer rechtop, terwijl bij Uranus de polen naar de zon zijn toegekeerd.</div>
+	<div id="infoneptune" class="infoneptune">Neptunus. <br><br>Neptunus is vernoemd naar de Romeinse God van de Zee. De planeet doet maar liefst 165 jaar over een baan om de zon. Net als de andere gasreuzen bestaat Neptunus vooral uit waterstof en helium. Maar er zit ook methaangas in de atmosfeer.</div>
+	
+	
+
+    <script src="descriptions.js"></script>
+	
+    <script >
+	document.getElementById('infosun').innerHTML = infoSun;
+	</script>
+</body>
+
+</html>

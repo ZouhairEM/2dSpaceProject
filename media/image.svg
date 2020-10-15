@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" viewBox="0 0 1000 600">
+  <style>
+    .st0{fill:#FFFF00;} .st1{fill:#808080;} .st2{fill:#EA9C4E;} .st3{fill:#3FA9F5;} .st4{fill:#F15A24;} .st5{fill:#DDC966;} .st6{fill:#A566C6;} .st7{fill:#3D9EC9;} .st8{fill:#2C709B;}
+  </style>
+  <circle id="Sun" cx="496.3" cy="300.4" r="45.2" class="st0"/>
+  <circle id="Mercury" cx="423.6" cy="300.8" r="5.8" class="st1"/>
+  <circle id="Venus" cx="576.8" cy="250.7" r="10.3" class="st2"/>
+  <circle id="Earth" cx="386.2" cy="357.4" r="11" class="st3"/>
+  <circle id="Mars" cx="628.8" cy="360.7" r="8.2" class="st4"/>
+  <circle id="Jupiter" cx="505.9" cy="509.8" r="19.6" class="st5"/>
+  <circle id="Saturn" cx="402.1" cy="156.8" r="14.2" class="st6"/>
+  <circle id="Uranus" cx="235.9" cy="265.9" r="7" class="st7"/>
+  <circle id="Neptune" cx="737.7" cy="310.1" r="9" class="st8"/>
+</svg>

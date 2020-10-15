@@ -1,0 +1,312 @@
+body {
+    background-image: url('media/spacedef.png');
+    margin: 0;
+    width: 80%;
+    cursor: pointer;
+}
+@font-face {
+    font-family: 'socialfont';
+    src: url('http://mediaashley.com/MyFont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+#range {
+    width: 90%;
+}
+.range-class,
+.disappearbutton,
+.blackholebutton,
+.soundbutton,
+.reloadbutton,
+.cometsbutton,
+.playbutton,
+.portfoliobutton {
+    width: 13%;
+    height: 50px;
+    display: inline-block;
+    vertical-align: top;
+    font-family: Verdana, "Helvetica", sans-serif;
+    font-size: small;
+    font-weight: bold;
+    color: #FFFFFF;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    text-shadow: 1px 1px 0px #07526e;
+    padding-top: 6px;
+    padding-left: 1%;
+    margin-left: auto;
+    margin-right: auto;
+    left: 15%;
+    margin-top: 2%;
+    position: relative;
+    cursor: pointer;
+    border: none;
+    background: #000000;
+    background-image: linear-gradient(bottom, rgb(14, 137, 182) 0%, rgb(22, 179, 236) 100%);
+    border-radius: 5px;
+    box-shadow: inset 0px 1px 0px #5C6061, 0px 5px 0px 0px #4A4A4A, 0px 10px 5px #060606;
+}
+.portfoliobutton {
+    width: 13%;
+    height: 50px;
+    display: inline-block;
+    vertical-align: top;
+    font-family: Verdana, "Helvetica", sans-serif;
+    font-size: small;
+    font-weight: bold;
+    color: #FFFFFF;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    text-shadow: 1px 1px 0px #07526e;
+    padding-top: 6px;
+    padding-left: 1%;
+    margin-left: auto;
+    margin-right: auto;
+    left: 15%;
+    margin-top: 2%;
+    position: relative;
+    cursor: pointer;
+    border: none;
+    background: #467;
+    background-image: linear-gradient(bottom, rgb(14, 137, 182) 0%, rgb(22, 179, 236) 100%);
+    border-radius: 5px;
+    box-shadow: inset 0px 1px 0px #5C6061, 0px 5px 0px 0px #4A4A4A, 0px 10px 5px #060606;
+}
+#infoblackhole,
+#infosun,
+#infojupiter,
+#infomercury,
+#infovenus,
+#infoearth,
+#infomars,
+#infosaturn,
+#infouranus,
+#infoneptune {
+    width: 250px;
+    height: 0px;
+    float: right;
+    position: relative;
+    margin-top: -20%;
+    margin-right: -5%;
+    max-width: 250px;
+    opacity: 0.0;
+}
+.higheropacity {
+    opacity: 1.0 !important
+}
+.loweropacity {
+    opacity: 0.0 !important
+}
+.infoblackhole,
+.infosun,
+.infojupiter,
+.infomercury,
+.infovenus,
+.infoearth,
+.infomars,
+.infosaturn,
+.infouranus,
+.infoneptune {
+    font-family: Verdana, "Helvetica", sans-serif;
+    font-size: small;
+    font-weight: bold;
+    color: #FFFFFF;
+    text-decoration: none;
+    text-align: center;
+    font-size: 11px;
+    padding-top: 20px;
+    padding-bottom: 100px;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: white;
+    -moz-border-radius: 21px;
+    border-radius: 17px;
+    -moz-box-shadow: 0px 0px 1px #000000;
+    box-shadow: 0px 0px 1px #000000;
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr '#467', endColorstr '#04000d');
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr = '#467', endColorstr = '#04000d')";
+    background-image: -moz-linear-gradient(top, #467, #04000d);
+    background-image: -ms-linear-gradient(top, #467, #04000d);
+    background-image: -o-linear-gradient(top, #467, #04000d);
+    background-image: -webkit-linear-gradient(top, #467, rgba(0, 0, 0, 0.32));
+    background-image: linear-gradient(top, #467, #04000d);
+    -moz-background-clip: padding;
+    background-clip: padding-box;
+    opacity: 0.77;
+    -ms-filter: progid: DXImageTransform.Microsoft.Alpha(Opacity 77);
+    filter: alpha(opacity 77);
+}
+
+#infoblackhole.active,
+#infosun.active,
+#infojupiter.active,
+#infomercury.active,
+#infovenus.active,
+#infoearth.active,
+#infomars.active,
+#infosaturn.active,
+#infouranus.active,
+#infoneptune.active {
+    opacity: 0
+}
+#Sun {
+    fill: #FFFF00;
+}
+#Mercury {
+    fill: #575757;
+}
+#Venus {
+    fill: #FBB03B;
+}
+#Earth {
+    fill: #1860B2;
+}
+#Mars {
+    fill: #CF3814;
+}
+#Jupiter {
+    fill: #DDC966;
+}
+#Saturn {
+    fill: #564466;
+}
+#Uranus {
+    fill: #A2C0CB;
+}
+#Neptune {
+    fill: #004cd5;
+}
+#Moon {
+    fill: #5F5F5F;
+}
+#Ganymede {
+    fill: #74743A;
+}
+#Comet {
+    fill: purple;
+}
+.solarsystem {
+    margin-top: 0%;
+    margin-left: 21%;
+}
+.center-outer-container {
+    position: absolute;
+    display: table;
+    width: 100%;
+    height: 100%;
+}
+.center-inner-container {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+.centered-content {
+    display: inline-block;
+    text-align: left;
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #000;
+}
+
+img {
+    display: inline-block;
+    vertical-align: middle;
+    width: 9.5%;
+    opacity: 0.01;
+    margin-left: 45.1%;
+    margin-top: -63%;
+    -webkit-animation: spin 2s linear infinite;
+    -moz-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+}
+@-moz-keyframes spin {
+    100% {
+        -moz-transform: rotate(360deg);
+    }
+}
+@-webkit-keyframes spin {
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+@keyframes spin {
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+.class1 {
+    -webkit-animation: mymove 1s linear;
+    transition: 2.4s;
+    opacity: 0;
+    transform: scale(5) rotate(30deg);
+    -moz-transform: scale(5) rotate(30deg);
+    -webkit-transform: scale(5) rotate(30deg);
+    -o-transform: scale(5) rotate(30deg);
+}
+@-webkit-keyframes mymove {
+    0% {
+        -webkit-transform: scale(1.0, 1.0) rotate(0deg);
+        fill: #FFF;
+    }
+    40% {
+        -webkit-transform: scale(1.0, 1.0);
+        fill: #681704;
+    }
+    50% {
+        -webkit-transform: scale(1.0, 1.0);
+        fill: #681704;
+    }
+    60% {
+        -webkit-transform: scale(1.0, 1.0);
+        fill: #681704;
+    }
+    80% {
+        -webkit-transform: scale(1.0, 1, 0);
+        fill: black;
+    }
+    90% {
+        -webkit-transform: scale(1.0, 1, 0);
+        fill: black;
+    }
+    100% {
+        -webkit-transform: scale(1, 1);
+        fill-opacity: 0.5;
+    }
+}
+.class2 {
+    -webkit-animation: mymovetwo 1s linear;
+    animation-iteration-count: infinite;
+}
+@-webkit-keyframes mymovetwo {
+    0% {
+        -webkit-transform: rotate(0deg);
+        fill: #FFF;
+    }
+    40% {
+        -webkit-transform: scale(1.0, 1.0);
+        fill: #681704;
+    }
+    50% {
+        -webkit-transform: scale(1.0, 1.0);
+        fill: #681704;
+    }
+    60% {
+        -webkit-transform: scale(1.0, 1.0);
+        fill: #681704;
+    }
+    80% {
+        -webkit-transform: scale(1.0, 1, 0);
+        fill: black;
+    }
+    90% {
+        -webkit-transform: scale(1.0, 1, 0);
+        fill: black;
+    }
+    100% {
+        -webkit-transform: scale(1, 1);
+        fill-opacity: 0.0;
+    }
+}
